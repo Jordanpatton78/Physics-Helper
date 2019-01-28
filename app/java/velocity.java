@@ -14,31 +14,31 @@ public class velocity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_velocity);
 
-        EditText editText1=findViewById(R.id.editText1);
-        EditText editText2=findViewById(R.id.editText2);
-        EditText editText3=findViewById(R.id.editText3);
+        final EditText editText1=findViewById(R.id.editText1);
+        final EditText editText2=findViewById(R.id.editText2);
+        final EditText editText3=findViewById(R.id.editText3);
         Button solve=findViewById(R.id.solve);
-        final String veloInput=editText1.getText().toString();
-        final String disInput = editText2.getText().toString();
-        final String timInput = editText3.getText().toString();
         final TextView textView=findViewById(R.id.textView5);
         solve.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                if (veloInput == "v") {
+                final String veloInput=editText1.getText().toString();
+                final String disInput = editText2.getText().toString();
+                final String timInput = editText3.getText().toString();
+                if (veloInput.equals("")) {
                     int distInput = Integer.parseInt(disInput);
                     int timeInput = Integer.parseInt(timInput);
                     int value = distInput / timeInput;
                     String strValue = Integer.toString(value);
                     textView.setText(strValue);
                 }
-                else if (disInput== "Δx") {
+                else if (disInput.equals("")) {
                     int velocInput = Integer.parseInt(veloInput);
                     int timeInput = Integer.parseInt(timInput);
                     int value = velocInput*timeInput;
                     String strValue = Integer.toString(value);
                     textView.setText(strValue);
                 }
-                else if (timInput == "Δt") {
+                else if (timInput.equals("")) {
                     int velocInput = Integer.parseInt(veloInput);
                     int distInput = Integer.parseInt(disInput);
                     int value = distInput/velocInput;
