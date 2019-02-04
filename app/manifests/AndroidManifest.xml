@@ -11,6 +11,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".velocity"></activity>
         <activity android:name=".acceleration"></activity>
+        <activity android:name=".ke1"></activity>
+        <activity android:name=".ke2"></activity>
+        <activity android:name=".ke3"></activity>
+        <activity android:name=".ke4"></activity>
+        <activity android:name=".MainActivity2"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
