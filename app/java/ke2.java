@@ -49,7 +49,7 @@ public class ke2 extends AppCompatActivity {
                     textView.setText(strValue);
                 }
                 else if (timInput.equals("") && tim2Input.equals("")) {
-                    String strValue = "Please use the equation vf=vi+aΔt.";
+                    String strValue = "Please use another equation.";
                     textView.setText(strValue);
                 } else if (accInput.equals("")) {
                     double timeInput = Double.parseDouble(timInput);
